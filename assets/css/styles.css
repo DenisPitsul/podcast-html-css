@@ -1,0 +1,407 @@
+@import url(./reset.css);
+@import url(./fonts.css);
+
+:root {
+    --white-color: #ffffff;
+    --lemon-color: #AAB91E;
+    --black1-color: #111111;
+    --black2-color: #212121;
+    --grey1-color: #333333;
+    --grey2-color: #4F4F4F;
+    --grey3-color: #9C9797;
+    --light-grey-color: #DCDBDB;
+}
+
+body {
+    font-family: "AvenirNext", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container{
+    max-width: 1240px;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+    .container{
+        padding: 0 clamp(1.5rem, 6vw, 6.25rem)
+    }
+}
+
+/* ------------------------ HEADER ---------------------------------- */
+.header{
+    background-color: var(--black1-color);
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 0;
+}
+.header-logo-name{
+    color: var(--white-color);
+}
+.header-logo-name-bold{
+    font-weight: 800;
+}
+.header-nav{
+    display: none;
+}
+.header-nav-list{
+    display: flex;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+}
+.header-nav-link{
+    color: var(--white-color);
+}
+.header-btn{
+    display: none;
+    padding: 1.0625rem 3rem;
+    color: var(--black2-color);
+    background-color: var(--lemon-color);
+    border-radius: 4px;
+    border: none;
+    font-size: 0.875rem;
+}
+.header-burger-btn{
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+.header-burger-icon{
+    fill: var(--lemon-color);
+}
+
+@media screen and (min-width: 768px) {
+    .header-content {
+        padding: 1rem 0;
+    }
+    .header-logo-name {
+        font-size: 1.5rem;
+    }
+    .header-nav{
+        display: block;
+    }
+    .header-btn{
+        display: block;
+    }
+    .header-burger-btn{
+        display: none;
+    }
+}
+
+/* ------------------------------- HERO --------------------------------- */
+.hero{
+    width: 100%;
+    min-height: 800px;
+    position: relative;
+}
+.hero-wrapper, .hero-slide{
+    width: 100%;
+    height: 800px;
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white-color);
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.25;
+    padding: 0 clamp(1.5rem, 6vw, 6.25rem);
+}
+.swiper-pagination {
+    position: absolute;
+    bottom: 20% !important;
+}
+.swiper-pagination-bullet {
+    opacity: 1;
+    width: 8px;
+    height: 8px;
+    background-color: #BDBDBD;
+}
+.swiper-pagination-bullet-active {
+    width: 24px;
+    background-color: var(--lemon-color);
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero{
+        height: 880px;
+    }
+    .hero-wrapper, .hero-slide{
+        height: 880px;
+    }
+    .hero-title {
+        font-size: 5.5rem;
+        max-width: 777px;
+        width: 100%;
+    }
+}
+
+/* ---------------------------- EPISODES -------------------------------- */
+.episodes{
+    padding: 6.25rem 0;
+}
+.episodes-title{
+    color: var(--grey1-color);
+    font-size: 2rem;
+    line-height: 1.2;
+    padding-top: 1.5rem;
+    font-weight: 800;
+    position: relative;
+}
+.episodes-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 2px;
+    background-color: var(--grey3-color)
+}
+.episodes-list{
+    margin-top: 5.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.episodes-item{
+    border-radius: 8px;
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.episodes-item:first-child{
+    background-color: var(--lemon-color);
+    position: relative;
+    overflow: hidden;
+}
+.episodes-item:not(:first-child) {
+    padding: 4rem 0.625rem;
+}
+.episodes-new-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.episodes-item-image{
+    width: 100%;
+    object-fit: cover;
+}
+.episodes-item-title{
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--grey1-color);
+}
+.episodes-item:not(:first-child) .episodes-item-title{
+    font-size: 1.125rem;
+}
+.episodes-item-text{
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    color: var(--grey2-color);
+}
+.episodes-item-icons-list{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.episides-load-more-btn {
+    width: 100%;
+    padding: 1.125rem;
+    border-radius: 4px;
+    color: var(--black2-color);
+    border: none;
+    background-color: var(--lemon-color);
+    margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .episodes{
+        padding: 7.5rem 0;
+    }
+    .episodes-title{
+        font-size: 4rem;
+    }
+    .episodes-list{
+        margin-top: 3.5rem;
+        gap: 2rem;
+    }
+    .episodes-item{
+        border-radius: 24px;
+        padding: 5.5rem 2.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+    .episodes-item-image{
+        width: 320px;
+    }
+    .episodes-item:first-child .episodes-item-title,
+    .episodes-item:not(:first-child) .episodes-item-title{
+        font-size: 2rem;
+    }
+    .episodes-item-text{
+        font-size: 1.125rem;
+    }
+    .episides-load-more-btn {
+        display: block;
+        margin-top: 2.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 231px;
+    }
+}
+
+/* --------------------------- PLATFORMS ------------------------------- */
+.platforms{
+    background-color: var(--lemon-color);
+    padding: 5rem 0;
+}
+.platforms-title{
+    color: var(--black2-color);
+    font-size: 2rem;
+    line-height: 1.25;
+    padding-top: 1.5rem;
+    font-weight: 800;
+    position: relative;
+}
+.platforms-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 2px;
+    background-color: var(--grey1-color);
+}
+.platforms-list{
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+.platforms-item{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    flex-basis: 268px;
+}
+
+@media screen and (min-width: 768px) {
+    .platforms{
+        padding: 6.875rem 0 12.75rem;
+    }
+    .platforms-title{
+        color: var(--black2-color);
+        font-size: 4rem;
+        line-height: 1.2;
+    }
+    .platforms-list{
+        margin-top: 6rem;
+        row-gap: 6rem;
+        column-gap: 7.5rem;
+    }
+}
+
+/* -------------------------- GUARDIANS ------------------------------ */
+.guardians{
+    background-color: var(--black1-color);
+    padding: 5.375rem 0 4.875rem;
+}
+.guardians-title{
+    color: var(--white-color);
+    font-size: 2rem;
+    line-height: 1.2;
+    padding-top: 1.5rem;
+    font-weight: 800;
+    position: relative;
+}
+.guardians-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 2px;
+    background-color: var(--grey3-color);
+}
+.guardians-list{
+    margin-top: 2.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.guardians-item{
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.guardians-img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+.guardians-img-bg{
+    position: absolute;
+    top: 0; 
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #00000047;
+}
+.guardians-content{
+    position: absolute;
+    bottom: 1.125rem;
+    left: 1rem;
+}
+.guardians-name{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: var(--lemon-color);
+    margin-bottom: 0.5rem;
+}
+.guardians-label{
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--white-color);
+}
+
+@media screen and (min-width: 768px) {
+    .guardians{
+        background-color: var(--black1-color);
+        padding: 8.5rem 0 11.625rem;
+    }
+    .guardians-title{
+        font-size: 4rem;
+    }
+    .guardians-list{
+        margin-top: 6rem;
+        flex-direction: row;
+    }
+    .guardians-item{
+        flex-basis: calc(100% / 3 - 1rem);
+    }
+}
