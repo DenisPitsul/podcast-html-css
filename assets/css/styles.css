@@ -252,7 +252,10 @@ body {
         gap: 2rem;
     }
     .episodes-item-image{
-        width: 320px;
+        width: 29%;
+    }
+    .episodes-item-content {
+        flex-grow: 1;
     }
     .episodes-item:first-child .episodes-item-title,
     .episodes-item:not(:first-child) .episodes-item-title{
