@@ -181,6 +181,96 @@
         </div>
       </section>
 
+      <section class="questions">
+        <div class="container">
+          <h2 class="questions-title title-top-line">Frequently asked questions</h2>
+          <p class="questions-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <ul class="questions-list">
+            <li class="questions-item">
+              <div class="questions-item-title">
+                <h3 class="questions-item-title-text">Question text goes here</h3>
+                <button class="questions-item-btn" type="button">
+                  <svg class="questions-item-btn-icon" width="32" height="32">
+                    <use href="./assets/images/icons.svg#icon-plus"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions-item-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </div>
+            </li>
+            <li class="questions-item">
+              <div class="questions-item-title">
+                <h3 class="questions-item-title-text">Question text goes here</h3>
+                <button class="questions-item-btn" type="button">
+                  <svg class="questions-item-btn-icon" width="32" height="32">
+                    <use href="./assets/images/icons.svg#icon-plus"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions-item-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </div>
+            </li>
+            <li class="questions-item">
+              <div class="questions-item-title">
+                <h3 class="questions-item-title-text">Question text goes here</h3>
+                <button class="questions-item-btn" type="button">
+                  <svg class="questions-item-btn-icon" width="32" height="32">
+                    <use href="./assets/images/icons.svg#icon-plus"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions-item-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </div>
+            </li>
+            <li class="questions-item">
+              <div class="questions-item-title">
+                <h3 class="questions-item-title-text">Question text goes here</h3>
+                <button class="questions-item-btn" type="button">
+                  <svg class="questions-item-btn-icon" width="32" height="32">
+                    <use href="./assets/images/icons.svg#icon-plus"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </div>
+            </li>
+            <li class="questions-item">
+              <div class="questions-item-title">
+                <h3 class="questions-item-title-text">Question text goes here</h3>
+                <button class="questions-item-btn" type="button">
+                  <svg class="questions-item-btn-icon" width="32" height="32">
+                    <use href="./assets/images/icons.svg#icon-plus"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </div>
+            </li>
+            <li class="questions-item">
+              <div class="questions-item-title">
+                <h3 class="questions-item-title-text">Question text goes here</h3>
+                <button class="questions-item-btn" type="button">
+                  <svg class="questions-item-btn-icon" width="32" height="32">
+                    <use href="./assets/images/icons.svg#icon-plus"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="questions-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section class="contact-us">
         <div class="container">
           <div class="contact-us-wrapper">
@@ -197,5 +287,21 @@
         </div>
       </section>
     </main>
+
+    <script>
+      const items = document.querySelectorAll('.questions-item');
+
+      items.forEach(item => item.addEventListener('click', () => {
+        const activeItem = document.querySelector('.active');
+        if(item === activeItem) {
+          item.classList.remove('active');
+        } else {
+          if(activeItem !== null)
+            activeItem.classList.remove('active');
+          item.classList.add('active');
+        }
+      }))
+
+    </script>
   </body>
 </html>
